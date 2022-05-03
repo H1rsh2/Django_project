@@ -1,0 +1,95 @@
+<html lang="ru" dir="ltr"><head>
+<title>Войти | Управление закупками</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+
+  <link rel="stylesheet" type="text/css" href="/static/admin/css/nav_sidebar.css">
+  <script src="/static/admin/js/nav_sidebar.js" defer=""></script>
+
+<link rel="stylesheet" type="text/css" href="/static/admin/css/login.css">
+
+
+
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" login" data-admin-utc-offset="0" data-new-gr-c-s-check-loaded="14.1058.0" data-gr-ext-installed="">
+
+<!-- Container -->
+<div id="container">
+
+
+    <!-- Header -->
+
+    <div id="header">
+        <div id="branding">
+
+<h1 id="site-name"><a href="{% url 'home' %}">Управление закупками</a></h1>
+
+        </div>
+
+
+    </div>
+
+    <!-- END Header -->
+
+
+
+    <div class="main" id="main">
+
+
+
+      <div class="content">
+
+
+
+        <!-- Content -->
+        <div id="content" class="colM">
+
+
+
+
+
+
+
+
+<div id="content-main">
+
+
+
+<form action="/admin/login/?next=/admin/" method="post" id="login-form"><input type="hidden" name="csrfmiddlewaretoken" value="nNEQTi51N0Gyi68Z7zkPArXqzz283B4piYq7K8mHQg0RORdzrYvWzoziV9SzkLNV">
+  <div class="form-row">
+
+    <label for="id_username" class="required">Имя пользователя:</label> <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
+  </div>
+  <div class="form-row">
+
+    <label for="id_password" class="required">Пароль:</label> <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
+    <input type="hidden" name="next" value="/admin/">
+  </div>
+
+{% csrf_token %}
+  <div class="submit-row">
+    <input type="submit" value="Войти">
+  </div>
+</form>
+
+</div>
+
+
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </div>
+    </div>
+</div>
+<!-- END Container -->
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

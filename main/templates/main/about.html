@@ -1,0 +1,51 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Поставщики
+{% endblock %}
+
+{% block content %}
+<br>
+    <h1>Поставщики</h1>
+<br>
+   <div class="d1">
+       <form>
+           <input type="text" placeholder="Искать здесь...">
+           <button type="submit"></button>
+       </form>
+   </div>
+<br>
+    <table class="table table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Название организации</th>
+            <th scope="col">Тип продукции</th>
+            <th scope="col">ИНН</th>
+            <th scope="col">ОГРН</th>
+            <th scope="col">Почта</th>
+            <th scope="col">Номер телефона</th>
+            <th scope="col">Адрес</th>
+        </tr>
+        </thead>
+        {% for el in providers %}
+         <tr class="warning">
+            <td>{{ el.name }}</td>
+            <td>{{ el.type }}</td>
+            <td>{{ el.inn }}</td>
+            <td>{{ el.kpp }}</td>
+            <td>{{ el.mail }}</td>
+            <td>{{ el.phone }}</td>
+            <td>{{ el.address }}</td>
+         </tr>
+        {% endfor %}
+    </table>
+    <div class="item-list">
+        <ul class="pager">
+            <li class="pager-current first"><span>1</span></li>
+            <li class="pager-item"><a href="/node?page=1" title="На страницу номер 2">2</a></li>
+            <li class="pager-item"><a href="/node?page=2" title="На страницу номер 3">3</a></li>
+            <li class="pager-item"><a href="/node?page=3" title="На страницу номер 4">4</a></li>
+            <li class="pager-next last"><a href="/node?page=1" title="На следующую страницу">›</a></li>
+        </ul>
+    </div>
+{% endblock %}
